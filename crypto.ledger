@@ -1,0 +1,49 @@
+; journal created 2023-10-28 by hledger
+
+2021-12-24
+    assets:trading:ETH:revolut                            0.02686323 ETH @@ 97.50010889 EUR
+    assets:bank:revolut:courant                         -97.50010889 EUR
+    assets:bank:revolut:courant                          -2.49989111 EUR
+    expenses:fees:revolut                                 2.49989111 EUR
+
+2021-12-25
+    assets:trading:DOGE:revolut                         581.0949575 DOGE @@ 97.50000461 EUR
+    assets:bank:revolut:courant                         -97.50000461 EUR
+    assets:bank:revolut:courant                          -2.49999539 EUR
+    expenses:fees:revolut                                 2.49999539 EUR
+
+2021-12-26
+    assets:trading:MATIC:revolut             20 MATIC @@ 49.33891528 EUR
+    assets:bank:revolut:courant                         -49.33891528 EUR
+    assets:bank:revolut:courant                          -1.22999999 EUR
+    expenses:fees:revolut                                 1.22999999 EUR
+
+2021-12-28
+    assets:trading:ADA:revolut                            7.339225 ADA @@ 9.75 EUR
+    assets:bank:revolut:courant                          -9.75000000 EUR
+    assets:bank:revolut:courant                          -0.25000000 EUR
+    expenses:fees:revolut                                 0.25000000 EUR
+
+2022-01-06
+    assets:trading:DOGE:revolut                         140.0000000 DOGE @@ 19.61636004 EUR
+    assets:bank:revolut:courant                         -19.61636004 EUR
+    assets:bank:revolut:courant                          -0.49000000 EUR
+    expenses:fees:revolut                                 0.49000000 EUR
+
+2022-01-06
+    assets:trading:MATIC:revolut             10 MATIC @@ 19.42750081 EUR
+    assets:bank:revolut:courant                         -19.42750081 EUR
+    assets:bank:revolut:courant                          -0.49000000 EUR
+    expenses:fees:revolut                                 0.49000000 EUR
+
+2022-05-13
+    assets:trading:ETH:revolut                            0.00482323 ETH @@ 9.75000505 EUR
+    assets:bank:revolut:courant                          -9.75000505 EUR
+    assets:bank:revolut:courant                          -0.24999495 EUR
+    expenses:fees:revolut                                 0.24999495 EUR
+
+2022-06-07
+    assets:trading:BTC:revolut                            0.00049285 BTC @@ 13.65008586 EUR
+    assets:bank:revolut:courant                         -13.65008586 EUR
+    assets:bank:revolut:courant                          -0.34980336 EUR
+    expenses:fees:revolut                                 0.34980336 EUR

@@ -18,16 +18,28 @@
               nodePackages.markdownlint-cli
               pre-commit
 
-              hello
+              # Ledger
+              ledger
+              hledger
+              hledger-ui
+              hledger-web
+
+              # needed by get_prices.ts script
+              deno
+
+              # Commands helper
+              just
+              bkt
             ];
             shellHook = ''
-              export PROJ="ledger-tools"
+              export PROJ="ledger-tool"
+              export PUPPETEER_EXECUTABLE_PATH="${pkgs.chromium}/bin/chromium"
 
+              alias run="just"
               echo ""
               echo "⭐ Welcome to the $PROJ project ⭐"
               echo ""
-              hello
-              echo ""
+              just
             '';
           };
       });

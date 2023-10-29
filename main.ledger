@@ -1,0 +1,5 @@
+commodity 1 000.00 EUR
+
+include crypto.ledger
+include prices/tradingview/prices.ledger
+
