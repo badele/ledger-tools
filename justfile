@@ -28,17 +28,26 @@ ALLSYMBOLS := replace(`hledger -f main.ledger account trading | cut -d: -f3`,"\n
 roi symbols=ALLSYMBOLS: 
     #!/usr/bin/env sh
     for symbol in {{symbols}}; do 
-        echo "== '$symbol' =="
+        echo "=== $symbol ==="
         hledger roi -f main.ledger -Y --inv $symbol --pnl "unrealized" --value=then -e 2024 -Y
     done
 
-# Update help documentation
-@updatedochelp:
-    sed -i '0,/## Help/!d' README.md
-    echo "\`\`\`text" >> README.md
-    just >> README.md
-    echo "\`\`\`" >> README.md
+@_updatecontent filename marker command *ARGS:
+    echo '```text' > /tmp/replace.txt
+    {{ command }} {{ ARGS }} >> /tmp/replace.txt
+    echo '```' >> /tmp/replace.txt
+    sed -i '/BEGIN {{marker}}/,/END {{marker}}/!b;//!d;/BEGIN {{marker}}/r /tmp/replace.txt' README.md
 
+# Update commands documentation
+@updatecommand:
+    just _updatecontent README.md COMMAND just
+
+# Update Return Of Investment
+@updateroi:
+    just _updatecontent README.md ROI just roi "'ETH BTC'"
+
+# Update all documentation
+@updatedoc: updatecommand updateroi
 
 # Run command interactively, view the result in realtime
 @view:
