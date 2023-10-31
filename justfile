@@ -22,15 +22,17 @@ ALLSYMBOLS := replace(`hledger -f main.ledger account trading | cut -d: -f3`,"\n
 
 # Download price from provider
 @prices provider:
-    LEDGER_FILE_PRICES=prices/tradingview/prices.ledger deno run -A prices/{{ provider }}/get_prices.ts
+    LEDGER_FILE_PRICES=prices/{{provider}}/prices.ledger deno run -A prices/{{ provider }}/get_prices.ts
 
 # Show Return Of Investment
-roi symbols=ALLSYMBOLS: 
+roi symbols=ALLSYMBOLS:
     #!/usr/bin/env sh
     for symbol in {{symbols}}; do 
         echo "=== $symbol ==="
-        hledger roi -f main.ledger -Y --inv $symbol --pnl "unrealized" --value=then -e 2024 -Y
+        hledger roi -f main.ledger --inv $symbol --pnl "unrealized" --value=then -e {{TODAY}}
     done
+    echo "=== TOTAL ==="
+    hledger roi -f main.ledger --inv "trading" --pnl "unrealized" --value=then -e {{TODAY}}
 
 @_updatecontent filename marker command *ARGS:
     echo '```text' > /tmp/replace.txt
