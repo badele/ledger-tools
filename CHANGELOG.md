@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.0](https://github.com/badele/nix-projects/compare/v0.1.0..v0.2.0) - 2023-10-31
+#### Features
+- show ROI Total - ([b8442cd](https://github.com/badele/nix-projects/commit/b8442cdb5a19c5285d8c39be11c13a9479eb1cd8)) - [@badele](https://github.com/badele)
+- add yahoo history prices downloader - ([5697704](https://github.com/badele/nix-projects/commit/5697704423cf9fc5569297888a89849de1c2c2af)) - [@badele](https://github.com/badele)
+
+- - -
+
 ## [v0.1.0](https://github.com/badele/nix-projects/compare/5f54381a480ec5a5f8b0a422d77f8c1bca241c1b..v0.1.0) - 2023-10-31
 #### Features
 - update documentation generator - ([a852104](https://github.com/badele/nix-projects/commit/a852104655a8778edd47f43d4050a9fd94c26d54)) - [@badele](https://github.com/badele)
